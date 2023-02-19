@@ -1,4 +1,33 @@
+//input geometry calculation
+document.getElementById('btn-triangle').addEventListener('click', function(){
+    const baseTriangle = getInputFieldValueById('b-tri');
+    const heightTriangle = getInputFieldValueById('h-tri');
 
+    const validNumber = isNumber(baseTriangle, heightTriangle);
+    if (validNumber == true) {
+        const result = (0.5 * baseTriangle * heightTriangle).toFixed(2);
+        const area = isInteger(result);
+        showResult(area, 'Triangle');
+    }
+    else {
+        alert("Please enter a positive number");
+    }
+});
+
+document.getElementById('btn-rectangle').addEventListener('click', function(){
+    const widthRectangle = getInputFieldValueById('w-rec');
+    const lengthRectangle = getInputFieldValueById('l-rec');
+
+    const validNumber = isNumber(widthRectangle, lengthRectangle);
+    if (validNumber == true) {
+        const result = (widthRectangle * lengthRectangle).toFixed(2);
+        const area = isInteger(result);
+        showResult(area, 'Rectangle');
+    }
+    else {
+        alert("Please enter a positive number");
+    }
+});
 
 //non-input geometry calculation
 document.getElementById('btn-parallelogram').addEventListener('click', function(){
