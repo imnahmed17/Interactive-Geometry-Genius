@@ -29,12 +29,12 @@
                     <h3 class="text-3xl font-bold mb-2">Triangle</h3>
                     <p class="mb-4">Area (A) = 0.5 x b x h</p>
                     <div class="flex justify-center mb-8">
-                        <input class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="b">
+                        <input id="b-tri" class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="b">
                         <p class="mx-2">cm</p>
-                        <input class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="h">
+                        <input id="h-tri" class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="h">
                         <p class="mx-2">cm</p>
                     </div>
-                    <button class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
+                    <button id="btn-triangle" class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
                 </div>
             </div>
             <!-- Rectangle -->
@@ -46,12 +46,12 @@
                     <h3 class="text-3xl font-bold mb-2">Rectangle</h3>
                     <p class="mb-4">Area (A) = w x l</p>
                     <div class="flex justify-center mb-8">
-                        <input class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="w">
+                        <input id="w-rec" class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="w">
                         <p class="mx-2">cm</p>
-                        <input class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="l">
+                        <input id="l-rec" class="px-2 bg-slate-200 w-1/4 placeholder:text-black" type="text" placeholder="l">
                         <p class="mx-2">cm</p>
                     </div>
-                    <button class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
+                    <button id="btn-rectangle" class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
                 </div>
             </div>
             <!-- Parallelogram -->
@@ -63,7 +63,7 @@
                     <h3 class="text-3xl font-bold mb-2">Parallelogram</h3>
                     <p class="mb-4">Area (A) = b x h</p>
                     <p class="mb-8">b = 10 cm, h = 12 cm</p>
-                    <button class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
+                    <button id="btn-parallelogram" class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
                 </div>
             </div>
             <!-- Calculation -->
@@ -71,6 +71,7 @@
                 <div class="my-2">
                     <h4 class="text-center text-xl font-bold underline">Area Calculation</h4>
                 </div>
+                <div id="calculate-geometry" class="table table-auto w-full"></div>
             </div>
             <!-- Rhombus -->
             <div onmouseenter="changeColor(this)" class="border rounded-md">
@@ -81,7 +82,7 @@
                     <h3 class="text-3xl font-bold mb-2">Rhombus</h3>
                     <p class="mb-2">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                     <p class="mb-8">d<sub>1</sub> = 16 cm, d<sub>2</sub> = 8 cm</p>
-                    <button class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
+                    <button id="btn-rhombus" class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
                 </div>
             </div>
             <!-- Pentagon -->
@@ -93,7 +94,7 @@
                     <h3 class="text-3xl font-bold mb-2">Pentagon</h3>
                     <p class="mb-2">Area (A) = 0.5 x p x b</p>
                     <p class="mb-8">p = 6 cm, b = 10 cm</p>
-                    <button class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
+                    <button id="btn-pentagon" class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
                 </div>
             </div>
             <!-- Ellipse -->
@@ -105,11 +106,12 @@
                     <h3 class="text-3xl font-bold mb-2">Ellipse</h3>
                     <p class="mb-2">Area (A) = &pi;ab</p>
                     <p class="mb-8">a = 10 cm, b = 4 cm</p>
-                    <button class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
+                    <button id="btn-ellipse" class="bg-sky-500 px-28 py-2.5 mb-8 text-white rounded-lg font-bold">Calculate</button>
                 </div>
             </div>
         </div>
     </main>
     <script src="js/common.js"></script>
+    <script src="js/calculation.js"></script>
 </body>
 </html>
