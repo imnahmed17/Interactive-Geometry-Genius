@@ -1,4 +1,4 @@
-//input geometry calculation
+// triangle calculation
 document.getElementById('btn-triangle').addEventListener('click', function(){
     const baseTriangle = getInputFieldValueById('b-tri');
     const heightTriangle = getInputFieldValueById('h-tri');
@@ -14,6 +14,7 @@ document.getElementById('btn-triangle').addEventListener('click', function(){
     }
 });
 
+// rectangle calculation
 document.getElementById('btn-rectangle').addEventListener('click', function(){
     const widthRectangle = getInputFieldValueById('w-rec');
     const lengthRectangle = getInputFieldValueById('l-rec');
@@ -29,27 +30,71 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
     }
 });
 
-//non-input geometry calculation
+// parallelogram calculation
 document.getElementById('btn-parallelogram').addEventListener('click', function(){
-    let result = (10 * 12).toFixed(2);
-    const area = isInteger(result);
-    showResult(area, 'Parallelogram');
+    const baseParallelogram = getInputFieldValueById('b-para');
+    const heightParallelogram = getInputFieldValueById('h-para');
+
+    const validNumber = isNumber(baseParallelogram, heightParallelogram);
+    if (validNumber == true) {
+        const result = (baseParallelogram * heightParallelogram).toFixed(2);
+        const area = isInteger(result);
+        showResult(area, 'Parallelogram');
+    }
+    else {
+        alert("Please enter a positive number");
+    }
 });
 
+// rhombus calculation
 document.getElementById('btn-rhombus').addEventListener('click', function(){
-    let result = (0.5 * 16 * 8).toFixed(2);
-    const area = isInteger(result);
-    showResult(area, 'Rhombus');
+    const diagonal1Rhombus = getInputFieldValueById('d1-rhom');
+    const diagonal2Rhombus = getInputFieldValueById('d2-rhom');
+
+    const validNumber = isNumber(diagonal1Rhombus, diagonal2Rhombus);
+    if (validNumber == true) {
+        const result = (0.5 * diagonal1Rhombus * diagonal2Rhombus).toFixed(2);
+        const area = isInteger(result);
+        showResult(area, 'Rhombus');
+    }
+    else {
+        alert("Please enter a positive number");
+    }
 });
 
+// pentagon calculation
 document.getElementById('btn-pentagon').addEventListener('click', function(){
-    let result = (0.5 * 6 * 10).toFixed(2);
-    const area = isInteger(result);
-    showResult(area, 'Pentagon');
+    const apothem = getInputFieldValueById('a-pen');
+    const sideLength = getInputFieldValueById('s-pen');
+
+    const validNumber = isNumber(apothem, sideLength);
+    if (validNumber == true) {
+        const result = (2.5 * apothem * sideLength).toFixed(2);
+        const area = isInteger(result);
+        showResult(area, 'Pentagon');
+    }
+    else {
+        alert("Please enter a positive number");
+    }
 });
 
+// ellipse calculation
 document.getElementById('btn-ellipse').addEventListener('click', function(){
-    let result = (Math.PI * 10 * 4).toFixed(2);
-    const area = isInteger(result);
-    showResult(area, 'Ellipse');
+    const majorRadius = getInputFieldValueById('a-elli');
+    const minorRadius = getInputFieldValueById('b-elli');
+
+    const validNumber = isNumber(majorRadius, minorRadius);
+    if (validNumber == true) {
+        if (minorRadius <= majorRadius) {
+            const result = (Math.PI * majorRadius * minorRadius).toFixed(2);
+            const area = isInteger(result);
+            showResult(area, 'Ellipse');
+        }
+        else {
+            alert("Minor radius can not be greater than major radius");
+        }
+    }
+    else {
+        alert("Please enter a positive number");
+    }
 });

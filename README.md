@@ -1,4 +1,5 @@
-# geometry-genius-resources
+# interactive_geometry_genius
+A web based application where we can calculate the area of triangle, rectangle, parallelogram, rhombus, pentagon, and ellipse.
 
-### Click here to [Create Private Repo](https://classroom.github.com/a/6nRSQFlh)
-Private Repo Link: [https://classroom.github.com/a/6nRSQFlh](https://classroom.github.com/a/6nRSQFlh)
+## Live Link
+Hosted in Netlify -> [Interactive Geometry Genius](https://fastidious-biscuit-20960f.netlify.app)

@@ -43,7 +43,15 @@ function showResult(area, geometry) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
     <td class="h-3">${count1}</td>
-    <td class="h-3">${area} cm<sup>2</sup></td>
-    <td class="text-right h-10"><button class="bg-sky-500 px-4 py-1 text-white rounded">Convert to m<sup>2</sup></button></td>`
+    <td class="h-3"><span>${area} cm</span><sup>2</sup></td>
+    <td class="text-right h-10">
+        <button onclick="calculateToM(this, ${area})" class="bg-sky-500 px-4 py-1 text-white rounded">Convert to m<sup>2</sup></button>
+    </td>`
     div.appendChild(tr);
+}
+
+function calculateToM(btn, area) {
+    // console.log(btn.parentNode.previousElementSibling.children[0]);
+    const areaM = (area / 10000).toFixed(4);
+    btn.parentNode.previousElementSibling.children[0].innerText = areaM + " m";
 }
