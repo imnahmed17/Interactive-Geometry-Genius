@@ -1,4 +1,4 @@
-# interactive_geometry_genius
+# interactive-geometry-genius
 A web based application where we can calculate the area of triangle, rectangle, parallelogram, rhombus, pentagon, and ellipse.
 
 ## Live Link
